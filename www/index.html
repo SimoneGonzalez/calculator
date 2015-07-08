@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="mainCtrl">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Ionic Blank Starter</h1>
+      </ion-header-bar>
+      <ion-content>
+
+      <h1>{{message}}</h1>
+
+      <div class="container whole btn-group">
+        <div class="display">{{display}}</div>
+
+        <div class="button-bar">
+          <a class="button">x<sup>2</sup></a>
+          <a class="button">sin</a>
+          <a class="button">cos</a>
+          <a class="button">tan</a>
+        </div>
+        <div class="button-bar">
+          <a class="button"><span>&radic;</span></a>
+          <a class="button">sin<sup>-1</sup></a>
+          <a class="button">cos<sup>-1</sup></a>
+          <a class="button">tan<sup>-1</sup></a>
+        </div>
+
+        <div class="button-bar">
+          <button class="button" value="1">1</button>
+          <button class="button" value="2">2</button>
+          <button class="button" value="3">3</button>
+          <button class="button">%</button>
+        </div>
+
+        <div class="button-bar">
+          <button class="button" value="4">4</button>
+          <button class="button" value="5">5</button>
+          <button class="button" value="6">6</button>
+          <button class="button">x</button>
+        </div>
+
+        <div class="button-bar">
+          <button class="button" value="7">7</button>
+          <button class="button" value="8">8</button>
+          <button class="button" ng-click="updateDisplay()" value="9">9</button>
+          <button class="button">+</button>
+        </div>
+
+        <div class="button-bar">
+          <button class="button" value="0">0</button>
+          <button class="button"></button>
+          <button class="button">.</button>
+          <button class="button">-</button>
+        </div>
+
+        <div class="button-bar">
+          <button class="button btn-danger" ng-click="clear()"> clear</button>
+          <button class="button">=</button>
+        </div>
+      </div>
+
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
