@@ -27,59 +27,57 @@
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h2 class="title">Calculator</h1>
       </ion-header-bar>
       <ion-content>
-
-      <h1>{{message}}</h1>
 
       <div class="container whole btn-group">
         <div class="display">{{display}}</div>
 
         <div class="button-bar">
-          <a class="button">x<sup>2</sup></a>
-          <a class="button">sin</a>
-          <a class="button">cos</a>
-          <a class="button">tan</a>
+          <a class="button button-energized">x<sup>2</sup></a>
+          <a class="button button-energized" ng-click="sin()">sin</a>
+          <a class="button button-energized" ng-click="cos()">cos</a>
+          <a class="button button-energized" ng-click="tan()">tan</a>
         </div>
         <div class="button-bar">
-          <a class="button"><span>&radic;</span></a>
-          <a class="button">sin<sup>-1</sup></a>
-          <a class="button">cos<sup>-1</sup></a>
-          <a class="button">tan<sup>-1</sup></a>
-        </div>
-
-        <div class="button-bar">
-          <button class="button" value="1">1</button>
-          <button class="button" value="2">2</button>
-          <button class="button" value="3">3</button>
-          <button class="button">%</button>
+          <a class="button button-energized" ng-click="sqrt()"><span>&radic;</span></a>
+          <a class="button button-energized">sin<sup>-1</sup></a>
+          <a class="button button-energized">cos<sup>-1</sup></a>
+          <a class="button button-energized">tan<sup>-1</sup></a>
         </div>
 
         <div class="button-bar">
-          <button class="button" value="4">4</button>
-          <button class="button" value="5">5</button>
-          <button class="button" value="6">6</button>
-          <button class="button">x</button>
+          <button class="button" ng-click="updateDisplay('1')">1</button>
+          <button class="button" ng-click="updateDisplay('2')">2</button>
+          <button class="button" ng-click="updateDisplay('3')">3</button>
+          <button class="button button-royal operation" ng-click="operation()">/</button>
         </div>
 
         <div class="button-bar">
-          <button class="button" value="7">7</button>
-          <button class="button" value="8">8</button>
-          <button class="button" ng-click="updateDisplay()" value="9">9</button>
-          <button class="button">+</button>
+          <button class="button" ng-click="updateDisplay('4')">4</button>
+          <button class="button" ng-click="updateDisplay('5')">5</button>
+          <button class="button" ng-click="updateDisplay('6')">6</button>
+          <button class="button button-royal operation" ng-click="operation()">x</button>
         </div>
 
         <div class="button-bar">
-          <button class="button" value="0">0</button>
-          <button class="button"></button>
+          <button class="button" ng-click="updateDisplay('7')">7</button>
+          <button class="button" ng-click="updateDisplay('8')">8</button>
+          <button class="button" ng-click="updateDisplay('9')">9</button>
+          <button class="button button-royal operation" ng-click="operation()">+</button>
+        </div>
+
+        <div class="button-bar">
+          <button class="button" ng-click="updateDisplay('0')">0</button>
           <button class="button">.</button>
-          <button class="button">-</button>
+          <button class="button operation" ng-click="operation()">%</button>
+          <button class="button button-royal">-</button>
         </div>
 
         <div class="button-bar">
-          <button class="button btn-danger" ng-click="clear()"> clear</button>
-          <button class="button">=</button>
+          <button class="button button-assertive" ng-click="clear()"> clear</button>
+          <button class="button button-balanced" ng-click="equal()">=</button>
         </div>
       </div>
 

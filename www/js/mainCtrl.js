@@ -1,46 +1,47 @@
 angular.module('starter', [])
   .controller('mainCtrl', function($scope) {
     $scope.message="hello world";
-    $scope.display=0;
+    $scope.display='0';
+    $scope.memory;
 
-    $scope.updateDisplay = function(btn) {
-      $scope.display = btn;
+    $scope.updateDisplay = function(number) {
+      $scope.display += number;
     }
     $scope.square = function() {
-
     }
     $scope.sin = function() {
-
+      $scope.display = Math.sin($scope.display);
     }
 
     $scope.cos = function() {
+      $scope.display = Math.cos($scope.display);
 
     }
     $scope.tan = function() {
+      $scope.display = Math.tan($scope.display);
 
     }
-    $scope.sqrt = function() {
-
+    $scope.sqroot = function() {
+      $scope.display = Math.sqrt($scope.display);
     }
-    $scope.percent = function() {
+    // $scope.operation = function(sign) {
+    //       if(sign == '/') {}
+    //         else if() {}
+    //           else if() {
 
-    }
-    $scope.add = function() {
+    //           }
+    //           else if() {}
+    //             else {
 
-    }
+    //             };
 
-    $scope.mult = function() {
 
-    }
-    $scope.divide = function() {
+    // }
 
-    }
-    $scope.subtract = function() {
-
-    }
     $scope.clear = function() {
       $scope.display = 0;
     }
+
     $scope.equal = function() {
 
     }
